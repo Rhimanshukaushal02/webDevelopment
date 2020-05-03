@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        height: 650px;
+        padding: 10px;
+        margin: 10px;
+        
+        order: 1px solid black;
+        background-image: url(c.jpg);
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: 568px 600px;
+    }
+
+    #st1 {
+        /*border: 1px solid black;*/
+        /*background-color:brown;*/
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    #h h3 {
+        padding: 0px;
+        margin-top: 0px;
+        height: 58px;
+    }
+
+    .name {
+        margin-top: 0px;
+        width: 500px;
+        height: 20px;
+        /*background-color:brown*/
+    }
+
+    .rd3 {
+        margin-top: 30px;
+        /*border: 1px solid black;*/
+        display: flex;
+        margin-left: 10px;
+        ;
+
+    }
+
+    .country {
+        /*border: 1px solid black;*/
+        margin-top: 15px;
+    }
+
+    .city {
+        /*border: 1px solid black;*/
+        margin-top: 15px;
+    }
+
+    .contient {
+        /*border: 1px solid black;*/
+
+        width: 50px;
+
+    }
+
+    #inner32 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 200px;
+        margin-right: 10px;
+        b
+        /* order:2px solid black;*/
+    }
+
+    .copywrite {
+        border: 1px solid rgb(89, 89, 228);
+        padding: 10px;
+
+    }
+
+    .creative {
+        border: 1px solid rgb(89, 89, 228);
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    #color {
+        background-color: brown;
+        margin-top: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .th4 {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 10px;
+        ;
+    }
+
+    .date {
+        margin-left: 195px;
+        border: 1px solid rgb(89, 89, 228);
+        padding: 10px;
+        margin-right: 10px;
+    }
+
+    .btn {
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        background-color: blanchedalmond;
+    }
+
+    .th5 {
+        display: flex;
+        margin-left: 150px;
+        margin-top: 15px;
+
+    }
+
+    .btn:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form action="p.php" method="get" onsubmit="return validation()">
+
+            <fieldset>
+                <legend>
+                    <h3>Photo Details</h1>
+                </legend>
+                <div id="st1">
+                    <h3>
+                        Title<br><input type="text" id="title" class="name">
+                        </h1><br>
+
+                        <div id="des">
+                            <div>
+                                <h3>Discription<br><input type="text" class="name"></h3>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="rd3">
+                    <div id="inner31">
+                        <div id="contient">
+                            <h2>Continent</h2>
+                            <select name="contient">
+                                <option value="India">India</option>
+                                <option value="Pakistan">Pakistan</option>
+                                <option value="America">America</option>
+                                <option value="british">british</option>
+                            </select>
+                        </div>
+                        <div class="country">
+                            <h2>Country</h2>
+                            <input type="checkbox">
+                        </div>
+                        <div class="city">
+                            <h2>City</h2>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div id="inner32">
+                        <div class="copywrite">
+                            <input type="radio" value="h">All rights reserved<br>
+                            <input type="radio" value="h">Creative Commons
+                        </div>
+                        <div class="creative">
+                            <input type="radio" value="h">Attribution<br>
+                            <input type="radio" value="h">Noncommercial<br>
+                            <input type="radio" value="h">No Derivative<br>
+                            <input type="radio" value="h">Share Alike<br>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 id="color">
+                        I accept the software license <input type="checkbox"></h2>
+                </div>
+                <div class="th4">
+
+                    <div class="we">
+                        Rate this photo:<br>
+                        <input type="text"><br>
+                        Color Collection:<br>
+                        <input type="text">
+                    </div>
+                    <div class="date">
+                        Date Taken:<br>
+                        <input type="text"><br>
+                        Time Taken:<br>
+                        <input type="text">
+
+                    </div>
+                </div>
+                <div class="th5">
+                    <input class="btn" type="submit" value="Submit Querry">
+                    <input class="btn" type="reset" value="Clear Form">
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        function validation() {
+            var title = document.getElementsByTagName('input').value;
+            if (title = "") {
+                return (document.getElementsByTagName('input').style.border = "1px solid red";)
+            }
+        }
+    </script>
+</body>
+
+</html>
